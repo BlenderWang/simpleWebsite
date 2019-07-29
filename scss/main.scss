@@ -47,7 +47,6 @@ body {
         img {
             width: 3.2em;
             margin: .7em;
-            // float: left;
 
             &:hover {
                 width: 3.7em;
@@ -98,10 +97,6 @@ body {
                 transform: scale(0, 1);
                 transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
             }
-
-            // &:hover {
-            //     background: $light-grey;
-            // }
 
             &:hover::before {
                 transform-origin: left top;
