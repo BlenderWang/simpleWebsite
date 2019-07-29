@@ -1,0 +1,29 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 4.6rem;
+    background: $black;
+
+    .nav-brand {
+        filter: invert(95%);
+
+        img {
+            width: 3.8em;
+            margin: .5em;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $light-blue;
+
+        transition: color .3s ease-in-out;
+    }
+
+    a:hover {
+        color: $accent-clr;
+    }
+}
