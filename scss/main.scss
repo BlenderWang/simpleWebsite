@@ -279,12 +279,12 @@ body {
         }
 
         .align-left.slide-in {
-            transform: translateY(-30%) scale(.95)
+            transform: translateY(-30%) scale(.95) rotate(-2deg);
         }
 
         .slide-in.active {
             opacity: 1;
-            transform: translateY(0%) scale(1)
+            transform: translateY(0%) scale(1) rotate(0deg);
         }
     }
 }

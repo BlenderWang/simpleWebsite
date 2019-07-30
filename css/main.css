@@ -295,14 +295,14 @@ body {
 }
 
 .content .post .align-left.slide-in {
-  -webkit-transform: translateY(-30%) scale(0.95);
-          transform: translateY(-30%) scale(0.95);
+  -webkit-transform: translateY(-30%) scale(0.95) rotate(-2deg);
+          transform: translateY(-30%) scale(0.95) rotate(-2deg);
 }
 
 .content .post .slide-in.active {
   opacity: 1;
-  -webkit-transform: translateY(0%) scale(1);
-          transform: translateY(0%) scale(1);
+  -webkit-transform: translateY(0%) scale(1) rotate(0deg);
+          transform: translateY(0%) scale(1) rotate(0deg);
 }
 
 .footer {
