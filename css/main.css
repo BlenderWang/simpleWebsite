@@ -231,6 +231,31 @@ body {
   margin: 0;
 }
 
+.content .post figure .img-container {
+  position: relative;
+  max-width: 100%;
+  border-radius: 5px;
+  border: 1px solid #D9D9D9;
+  padding: .5em;
+  -webkit-box-shadow: 0 2px 3px #d6d6d6, 0 0 0 1px #d6d6d6;
+          box-shadow: 0 2px 3px #d6d6d6, 0 0 0 1px #d6d6d6;
+}
+
+.content .post figure .img-container img {
+  border-radius: 5px;
+  position: relative;
+  top: 0;
+}
+
+.content .post figure .img-container img:hover {
+  -webkit-transform: translate3d(0, -20px, 3em);
+          transform: translate3d(0, -20px, 3em);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.52, 0.28, 0.47, 1.15);
+  transition: -webkit-transform 0.3s cubic-bezier(0.52, 0.28, 0.47, 1.15);
+  transition: transform 0.3s cubic-bezier(0.52, 0.28, 0.47, 1.15);
+  transition: transform 0.3s cubic-bezier(0.52, 0.28, 0.47, 1.15), -webkit-transform 0.3s cubic-bezier(0.52, 0.28, 0.47, 1.15);
+}
+
 .content .post figcaption {
   font-size: 10px;
   text-align: center;
@@ -256,6 +281,28 @@ body {
   grid-column: 1 / span 1;
   text-align: right;
   border-right: 1px solid indianred;
+}
+
+.content .post .align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.content .post .slide-in {
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.content .post .align-left.slide-in {
+  -webkit-transform: translateY(-30%) scale(0.95);
+          transform: translateY(-30%) scale(0.95);
+}
+
+.content .post .slide-in.active {
+  opacity: 1;
+  -webkit-transform: translateY(0%) scale(1);
+          transform: translateY(0%) scale(1);
 }
 
 .footer {
