@@ -248,6 +248,7 @@ body {
 }
 
 .content .post figure .img-container img:hover {
+  will-change: transform;
   -webkit-transform: translate3d(0, -20px, 3em);
           transform: translate3d(0, -20px, 3em);
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.52, 0.28, 0.47, 1.15);
@@ -306,7 +307,7 @@ body {
 }
 
 .footer {
-  height: 5rem;
+  height: 6rem;
   background: #D9D9D9;
 }
 

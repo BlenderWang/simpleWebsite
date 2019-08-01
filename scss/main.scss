@@ -238,6 +238,7 @@ body {
                     top: 0;
 
                     &:hover {
+                        will-change: transform;
                         transform: translate3d(0, -20px, 3em);
                         transition: transform .3s cubic-bezier(.52,.28,.47,1.15);
                     }
@@ -291,7 +292,7 @@ body {
 
 // footer
 .footer {
-    height: 5rem;
+    height: 6rem;
     background: $light-grey;
 
     .social-media {
