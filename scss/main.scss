@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
-$black: #0D0D0D;
+$black: #343a40;
 $white: #F2F2F2;
 $light-blue: #93B7BF;
 $dark-grey: #475459;
@@ -26,7 +26,16 @@ body {
 		family: 'Roboto', Cambria, Cochin, Georgia, 'Times New Roman', Times,Arial, Helvetica, sans-serif;
 		size: 100%;
 		weight: 300;
-	}
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $dark-grey;
+    }
 }
 
 h1, h2 {
@@ -40,9 +49,9 @@ h1, h2 {
     }
 }
 
-// h3, h4, h5, h6 {
-//     font-size: 30px;
-// }
+h3, h4, h5, h6 {
+    font-size: 20px;
+}
 
 .btn {
     border-radius: 0;
@@ -55,9 +64,9 @@ h1, h2 {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 4.6rem;
-    padding: 0 40px 20px;
+    // padding: 0 40px 20px;
     background: $black;
     z-index: 10;
 
@@ -123,7 +132,7 @@ h1, h2 {
             display: block;
             height: 3px;
             position: relative;
-            transition: background .2s ease-out;
+            transition: all .2s ease-out;
             width: 28px;
 
             &::before,
@@ -221,8 +230,8 @@ h1, h2 {
 
                 &:hover {
                     will-change: transform;
-                    transform: translate3d(0, -20px, 3em);
-                    transition: transform .3s cubic-bezier(.52,.28,.47,1.15);
+                    transform: translate(0, -20px);
+                    transition: transform .3s ease-out;
                 }
             }
         }
@@ -232,78 +241,77 @@ h1, h2 {
         font-size: 10px;
         text-align: center;
     }
+}
 
+// showcase section
+#showcase {
+    .panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: $black;
+        overflow: hidden;
 
-    .post {
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-        grid-gap: 10px 20px;
-        max-width: 1000px;
-        margin: 3em auto;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
 
-        * {
-            grid-column: 2 / -2;
+      #overlay {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: rgba($black, .85);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform 0.5s ease, opacity 0.5s ease;
+
+        a {
+          border: 1px solid $white;
+        }
+      }
+
+      .panel:hover {
+        img {
+          transform: scale(1.2);
+          transition: transform 0.5s;
         }
 
-
-
-        .aside {
-            background: darken($white, 4%);
-            padding: 1rem;
-            grid-row: span 5;
-            align-self: start;
-        }
-
-        .aside-right {
-            border-left: 1px solid $accent-clr;
-            grid-column: span 1 / -1;
-        }
-
-        .aside-left {
-            grid-column: 1 / span 1;
-            text-align: right;
-            border-right: 1px solid $accent-clr;
-        }
-
-        .align-left {
-            float: left;
-            margin-right: 20px;
-        }
-
-        .slide-in {
-            opacity: 0;
-            transition: all .5s;
-        }
-
-        .align-left.slide-in {
-            transform: translateY(-30%) scale(.95) rotate(-2deg);
-        }
-
-        .slide-in.active {
-            opacity: 1;
-            transform: translateY(0%) scale(1) rotate(0deg);
+        #overlay {
+          opacity: 1;
+          transform: translateY(0px);
         }
     }
 }
 
 // footer
 .footer {
-    height: 6rem;
-    background: $light-grey;
+    background: darken($white, 4%);
 
     .social-media {
         display: flex;
         justify-content: center;
 
-        .fab {
+        .fab, .far {
             margin: 10px 30px 0 30px;
             font-size: 2rem;
-            color: darken($light-blue, 30%);
+            color: $black;
+            transition: font-size .3s ease;
         }
 
         a:hover {
-            .fab {
-                color: $accent-clr;
+            .fab, .far {
+                font-size: 2.2rem;
             }
         }
     }
@@ -318,7 +326,6 @@ h1, h2 {
         }
     }
 }
-
 
 @media (min-width: 768px) {
     .hamburger {
