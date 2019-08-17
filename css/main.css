@@ -156,7 +156,7 @@ h3, h4, h5, h6 {
 }
 
 .navbar-custom #menu-btn:checked ~ .hamburger .bar-icon {
-  background: #464e57;
+  background: #343a40;
 }
 
 .navbar-custom #menu-btn:checked ~ .hamburger .bar-icon::before {
@@ -237,6 +237,21 @@ h3, h4, h5, h6 {
 #about figcaption {
   font-size: 10px;
   text-align: center;
+}
+
+.rounded-circle {
+  height: 150px;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all .65s ease-in-out;
+  transition: all .65s ease-in-out;
+}
+
+.rounded-circle:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #showcase .panel {

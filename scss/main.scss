@@ -161,7 +161,7 @@ h3, h4, h5, h6 {
         display: none;
 
         &:checked ~ .hamburger .bar-icon {
-            background: lighten($black, 8%);
+            background: $black;
 
             &::before {
                 transform: rotate(-45deg) translate(11px, -1px);
@@ -240,6 +240,19 @@ h3, h4, h5, h6 {
     figcaption {
         font-size: 10px;
         text-align: center;
+    }
+}
+
+// partnership
+.rounded-circle {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    transition: all .65s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
     }
 }
 
