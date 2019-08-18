@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   color: #343a40;
-  background: #F2F2F2;
+  background: white;
   font-family: 'Roboto', Cambria, Cochin, Georgia, 'Times New Roman', Times,Arial, Helvetica, sans-serif;
   font-size: 100%;
   font-weight: 300;
@@ -33,7 +33,7 @@ h1, h2 {
   margin-top: 5.7rem;
   font-family: Georgia, 'Times New Roman', sans-serif;
   font-style: italic;
-  font-size: 80px;
+  font-size: 30px;
   font-weight: 100;
 }
 
@@ -239,7 +239,11 @@ h3, h4, h5, h6 {
   text-align: center;
 }
 
-.rounded-circle {
+#partners {
+  background: #e8e8e8;
+}
+
+#partners .rounded-circle {
   height: 150px;
   width: 150px;
   -o-object-fit: cover;
@@ -248,10 +252,15 @@ h3, h4, h5, h6 {
   transition: all .65s ease-in-out;
 }
 
-.rounded-circle:hover {
+#partners .rounded-circle:hover {
   cursor: pointer;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+#partners .hidden {
+  opacity: 0;
+  height: 0;
 }
 
 #showcase .panel {
@@ -397,6 +406,9 @@ h3, h4, h5, h6 {
     color: #F2F2F2;
     border-bottom: none !important;
     border-radius: 1px;
+  }
+  h1, h2 {
+    font-size: 80px;
   }
 }
 

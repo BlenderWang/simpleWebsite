@@ -21,7 +21,7 @@ body {
     margin: 0;
     padding: 0;
     color: $black;
-    background: $white;
+    background: white;
     font: {
 		family: 'Roboto', Cambria, Cochin, Georgia, 'Times New Roman', Times,Arial, Helvetica, sans-serif;
 		size: 100%;
@@ -44,7 +44,7 @@ h1, h2 {
     font: {
         family: Georgia, 'Times New Roman', sans-serif;
         style: italic;
-        size: 80px;
+        size: 30px;
         weight: 100;
     }
 }
@@ -244,15 +244,25 @@ h3, h4, h5, h6 {
 }
 
 // partnership
-.rounded-circle {
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    transition: all .65s ease-in-out;
+#partners {
+    background: darken($white, 4%);
 
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.2);
+    .rounded-circle {
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        transition: all .65s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+
+    .hidden {
+        opacity: 0;
+        height: 0;
+
     }
 }
 
@@ -371,6 +381,9 @@ h3, h4, h5, h6 {
         }
     }
 
+    h1, h2 {
+        font-size: 80px;
+    }
 }
 
 @media (max-width: 685px) {
