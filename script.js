@@ -42,21 +42,6 @@ const showMoreBtn = document.querySelector('.btn-show-more')
 const showLessBtn = document.querySelector('.btn-show-less')
 const hiddenRow = document.querySelector('.hidden')
 
-function toggleMore() {
-    showMoreBtn.classList.toggle('more-partners')
-    if(showMoreBtn.textContent == 'show more') {
-        showMoreBtn.textContent = 'show less'
-    }else {
-        showMoreBtn.textContent = 'show more'
-    }
-}
-
-showMoreBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    hiddenRow.classList.toggle('hidden')
-    toggleMore()
-})
-
 const itemsArray = [
     {
         id: 0,
@@ -114,3 +99,18 @@ function generateItems() {
 }
 
 generateItems()
+
+function toggleMore() {
+    showMoreBtn.classList.toggle('more-partners')
+    if(showMoreBtn.textContent == 'show more') {
+        showMoreBtn.textContent = 'show less'
+    }else {
+        showMoreBtn.textContent = 'show more'
+    }
+}
+
+showMoreBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    hiddenRow.classList.toggle('hidden')
+    toggleMore()
+})

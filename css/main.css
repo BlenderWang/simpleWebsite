@@ -2,6 +2,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -43,6 +44,11 @@ h3, h4, h5, h6 {
 
 .btn {
   border-radius: 0;
+}
+
+.hidden {
+  opacity: 0;
+  height: 0;
 }
 
 .navbar-custom {
@@ -187,18 +193,6 @@ h3, h4, h5, h6 {
   background: linear-gradient(rgba(249, 228, 148, 0.5), rgba(249, 228, 148, 0.5)), url("../images/photo-book.jpeg") center/cover fixed no-repeat;
 }
 
-.max-height .btn-default {
-  border: 1px solid #F2F2F2;
-  color: #F2F2F2;
-  -webkit-transition: all .3s ease .1s;
-  transition: all .3s ease .1s;
-}
-
-.max-height .btn-default:hover {
-  background: #626d78;
-  border: 1px solid #343a40;
-}
-
 #about p {
   line-height: 1.6;
   text-align: justify;
@@ -256,11 +250,6 @@ h3, h4, h5, h6 {
   cursor: pointer;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-#partners .hidden {
-  opacity: 0;
-  height: 0;
 }
 
 #showcase .panel {
