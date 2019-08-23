@@ -11,7 +11,7 @@ $accent-clr: indianred;
 
 html {
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -254,12 +254,6 @@ h3, h4, h5, h6 {
             transform: scale(1.2);
         }
     }
-
-    // .hidden {
-    //     opacity: 0;
-    //     height: 0;
-
-    // }
 }
 
 // showcase section
