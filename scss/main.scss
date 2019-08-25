@@ -61,7 +61,7 @@ h3, h4, h5, h6 {
 .hidden {
     opacity: 0;
     height: 0;
-
+    transition: all .2s ease;
 }
 
 // navigation & logo
@@ -74,17 +74,17 @@ h3, h4, h5, h6 {
     width: 100%;
     height: 4.7rem;
     // padding: 0 40px 20px;
-    background: $black;
+    background: $white;
     z-index: 10;
 
     .nav-brand {
-        filter: invert(1);
-
         img {
-            width: 3.2em;
-            margin: .7em;
+            width: 3.5em;
+            height: auto;
+            margin: .3em;
 
             &:hover {
+                filter: drop-shadow(8px 8px 10px $light-grey);
                 width: 3.7em;
                 transform: scale(1.1, 1.1);
                 transition: transform 0.3s ease-in;
@@ -94,12 +94,12 @@ h3, h4, h5, h6 {
 
     a {
         text-decoration: none;
-        color: $dark-grey;
+        color: $black;
 
         transition: color .3s ease-in-out;
 
         &:hover {
-            color: $yellow-main;
+            color: lighten($dark-grey, 20%);
         }
     }
 
@@ -135,7 +135,7 @@ h3, h4, h5, h6 {
         user-select: none;
 
         .bar-icon {
-            background: darken($light-grey, 8%);
+            background: $black;
             display: block;
             height: 3px;
             position: relative;
@@ -144,7 +144,7 @@ h3, h4, h5, h6 {
 
             &::before,
             &::after {
-                background: darken($light-grey, 8%);
+                background: $black;
                 content: '';
                 display: block;
                 height: 100%;
@@ -168,7 +168,7 @@ h3, h4, h5, h6 {
         display: none;
 
         &:checked ~ .hamburger .bar-icon {
-            background: $black;
+            background: $white;
 
             &::before {
                 transform: rotate(-45deg) translate(11px, -1px);
@@ -190,6 +190,10 @@ h3, h4, h5, h6 {
         transition: max-height .4s ease;
         clear: both;
     }
+}
+
+.top-nav-collapse {
+    box-shadow: 0 1px 30px darken($white, 10%);
 }
 
 // header
@@ -353,8 +357,17 @@ h3, h4, h5, h6 {
     }
 
     .navbar-custom {
+        background: transparent;
+        box-shadow: none;
+
+        .nav-brand {
+            img {
+                width: 3.5em;
+            }
+        }
+
         ul {
-            background: $black;
+            background: transparent;
             display: flex;
             align-items: center;
             margin-top: 10px;
@@ -364,10 +377,20 @@ h3, h4, h5, h6 {
             float: left;
 
             a {
-                color: $white;
+                color: $black;
                 border-bottom: none !important;
                 border-radius: 1px;
             }
+        }
+    }
+
+    // navbar collapsed
+    .top-nav-collapse {
+        background: $white;
+        box-shadow: 0 1px 30px darken($white, 10%);
+
+        a {
+            color: $black;
         }
     }
 

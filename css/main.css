@@ -48,6 +48,8 @@ h3, h4, h5, h6 {
 .hidden {
   opacity: 0;
   height: 0;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
 .navbar-custom {
@@ -58,21 +60,19 @@ h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 4.7rem;
-  background: #343a40;
+  background: #F2F2F2;
   z-index: 10;
 }
 
-.navbar-custom .nav-brand {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
 .navbar-custom .nav-brand img {
-  width: 3.2em;
-  margin: .7em;
+  width: 3.5em;
+  height: auto;
+  margin: .3em;
 }
 
 .navbar-custom .nav-brand img:hover {
+  -webkit-filter: drop-shadow(8px 8px 10px #D9D9D9);
+          filter: drop-shadow(8px 8px 10px #D9D9D9);
   width: 3.7em;
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
@@ -84,13 +84,13 @@ h3, h4, h5, h6 {
 
 .navbar-custom a {
   text-decoration: none;
-  color: #475459;
+  color: #343a40;
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 
 .navbar-custom a:hover {
-  color: #f9e494;
+  color: #758991;
 }
 
 .navbar-custom ul {
@@ -128,7 +128,7 @@ h3, h4, h5, h6 {
 }
 
 .navbar-custom .hamburger .bar-icon {
-  background: #c5c5c5;
+  background: #343a40;
   display: block;
   height: 3px;
   position: relative;
@@ -138,7 +138,7 @@ h3, h4, h5, h6 {
 }
 
 .navbar-custom .hamburger .bar-icon::before, .navbar-custom .hamburger .bar-icon::after {
-  background: #c5c5c5;
+  background: #343a40;
   content: '';
   display: block;
   height: 100%;
@@ -161,7 +161,7 @@ h3, h4, h5, h6 {
 }
 
 .navbar-custom #menu-btn:checked ~ .hamburger .bar-icon {
-  background: #343a40;
+  background: #F2F2F2;
 }
 
 .navbar-custom #menu-btn:checked ~ .hamburger .bar-icon::before {
@@ -183,6 +183,11 @@ h3, h4, h5, h6 {
   -webkit-transition: max-height .4s ease;
   transition: max-height .4s ease;
   clear: both;
+}
+
+.top-nav-collapse {
+  -webkit-box-shadow: 0 1px 30px #d9d9d9;
+          box-shadow: 0 1px 30px #d9d9d9;
 }
 
 .max-height {
@@ -377,8 +382,16 @@ h3, h4, h5, h6 {
     float: right;
     max-height: none !important;
   }
+  .navbar-custom {
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .navbar-custom .nav-brand img {
+    width: 3.5em;
+  }
   .navbar-custom ul {
-    background: #343a40;
+    background: transparent;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -391,9 +404,17 @@ h3, h4, h5, h6 {
     float: left;
   }
   .navbar-custom li a {
-    color: #F2F2F2;
+    color: #343a40;
     border-bottom: none !important;
     border-radius: 1px;
+  }
+  .top-nav-collapse {
+    background: #F2F2F2;
+    -webkit-box-shadow: 0 1px 30px #d9d9d9;
+            box-shadow: 0 1px 30px #d9d9d9;
+  }
+  .top-nav-collapse a {
+    color: #343a40;
   }
   h1, h2 {
     font-size: 80px;
