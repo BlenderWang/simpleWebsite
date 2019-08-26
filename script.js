@@ -5,9 +5,11 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 
 // navbar shifting bg color
 const slideInTop = document.querySelector('.navbar-custom')
+const aboutSection = document.querySelector('#about')
+const topOfAbout = aboutSection.offsetTop
 
 function fixToTop() {
-    (window.scrollY > 300) ? slideInTop.classList.add('top-nav-collapse') : slideInTop.classList.remove('top-nav-collapse');
+    (window.scrollY >= topOfAbout / 2) ? slideInTop.classList.add('top-nav-collapse') : slideInTop.classList.remove('top-nav-collapse');
 }
 
 window.addEventListener('scroll', fixToTop)

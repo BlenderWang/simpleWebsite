@@ -60,7 +60,7 @@ h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 4.7rem;
-  background: #F2F2F2;
+  background: transparent;
   z-index: 10;
 }
 
@@ -186,6 +186,7 @@ h3, h4, h5, h6 {
 }
 
 .top-nav-collapse {
+  background: #F2F2F2;
   -webkit-box-shadow: 0 1px 30px #d9d9d9;
           box-shadow: 0 1px 30px #d9d9d9;
 }
@@ -418,17 +419,6 @@ h3, h4, h5, h6 {
   }
   h1, h2 {
     font-size: 80px;
-  }
-}
-
-@media (max-width: 685px) {
-  .content .post {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    margin: 0 15px;
-  }
-  .content .post .aside-left, .content .post .aside-right {
-    border: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
