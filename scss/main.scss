@@ -240,7 +240,7 @@ h3, h4, h5, h6 {
                 &:hover {
                     will-change: transform;
                     transform: translate(0, -20px);
-                    transition: transform .3s ease-out;
+                    transition: all .3s ease-in;
                 }
             }
         }
