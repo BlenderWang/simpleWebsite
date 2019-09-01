@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
+// GLOBAL
 $black: #343a40;
 $white: #F2F2F2;
 $light-blue: #93B7BF;
@@ -74,20 +75,20 @@ h3, h4, h5, h6 {
     width: 100%;
     height: 4.7rem;
     // padding: 0 40px 20px;
-    background: transparent;
+    background: $white;
     z-index: 10;
+    transition: .3s;
 
     .nav-brand {
         img {
-            width: 3.5em;
+            width: 3.7em;
             height: auto;
-            margin: .3em;
+            margin: .55em .3em .5em;
+            transition: .4s;
 
             &:hover {
-                filter: drop-shadow(8px 8px 10px $light-grey);
-                width: 3.7em;
-                transform: scale(1.1, 1.1);
-                transition: transform 0.3s ease-in;
+                transform: rotate(35deg);
+                transition: all 0.3s ease-in;
             }
         }
     }
@@ -195,6 +196,13 @@ h3, h4, h5, h6 {
 .top-nav-collapse {
     background: $white;
     box-shadow: 0 1px 30px darken($white, 10%);
+
+    .nav-brand {
+        img {
+            margin: .75em .3em .4em;
+            width: 3.2em;
+        }
+    }
 }
 
 // header
@@ -346,6 +354,7 @@ h3, h4, h5, h6 {
     }
 }
 
+// MEDIA QUERIES
 @media (min-width: 768px) {
     .hamburger {
         display: none !important;
@@ -360,12 +369,6 @@ h3, h4, h5, h6 {
     .navbar-custom {
         background: transparent;
         box-shadow: none;
-
-        .nav-brand {
-            img {
-                width: 3.5em;
-            }
-        }
 
         ul {
             background: transparent;
@@ -389,6 +392,8 @@ h3, h4, h5, h6 {
     .top-nav-collapse {
         background: $white;
         box-shadow: 0 1px 30px darken($white, 10%);
+        opacity: 1;
+        transition: all .5s ease;
 
         a {
             color: $black;

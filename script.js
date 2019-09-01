@@ -9,7 +9,7 @@ const aboutSection = document.querySelector('#about')
 const topOfAbout = aboutSection.offsetTop
 
 function fixToTop() {
-    (window.scrollY >= topOfAbout / 2) ? slideInTop.classList.add('top-nav-collapse') : slideInTop.classList.remove('top-nav-collapse');
+    (window.scrollY >= topOfAbout / 3) ? slideInTop.classList.add('top-nav-collapse') : slideInTop.classList.remove('top-nav-collapse');
 }
 
 window.addEventListener('scroll', fixToTop)
